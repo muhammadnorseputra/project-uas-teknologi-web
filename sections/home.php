@@ -1,5 +1,6 @@
 <?php
 $db = new Connection();
+// var_dump($db->getIcon());die();
 ?>
 <!-- Header-->
 <header class="py-5">
@@ -154,9 +155,9 @@ $db = new Connection();
                     <p class="lead fw-light mb-4">Halo perkenalkan nama saya <?= $db->getProfile('nama') ?> biasa dipanggil <?= $db->getProfile('nama_panggilan') ?>.</p>
                     <p class="text-muted"><?= $db->getProfile('tentang') ?></p>
                     <div class="d-flex justify-content-center fs-2 gap-4">
-                        <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
-                        <a class="text-gradient" href="#!"><i class="bi bi-linkedin"></i></a>
-                        <a class="text-gradient" href="#!"><i class="bi bi-github"></i></a>
+                        <?php foreach($db->getIcon() as $icon): ?>
+                            <a class="text-gradient" href="<?= $icon->type ?>"><?= $icon->value ?></a>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>

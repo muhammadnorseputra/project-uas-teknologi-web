@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title><?= $db->getProfile('title') ?></title>
+        <title><?= $db->getProfile('title') ?> - <?= isset($_GET['page']) ? ucwords($_GET['page']) : 'Home'; ?></title>
         <!-- Favicon-->`
         <link rel="icon" type="image/x-icon" href="template/favicon.ico" />
         <!-- Custom Google font-->
