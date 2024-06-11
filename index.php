@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Portofolio - M. Nor Seputra</title>
-        <!-- Favicon-->
+        <!-- Favicon-->`
         <link rel="icon" type="image/x-icon" href="template/favicon.ico" />
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
