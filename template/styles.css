@@ -11586,14 +11586,21 @@ html {
   margin-top: 5vw;
   max-height: 40rem;
   max-width: 40rem;
+  z-index: -2;
 }
 .profile .profile-img {
-  height: 80vw;
-  max-height: 45rem;
+  height: 100vw;
+  max-height: 80rem;
   position: absolute;
-  bottom: 0;
-  left: 50%;
+  bottom: 0px;
+  left: 50.50%;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border-bottom-left-radius: 50px;
+  z-index: -1;
 }
 .profile .dots-1 {
   position: absolute;
@@ -11713,7 +11720,7 @@ html {
     width: 35vw;
   }
   .profile .profile-img {
-    height: 40vw;
+    height: 47vw;
   }
   .profile .dots-1 {
     width: 1.5vw;
