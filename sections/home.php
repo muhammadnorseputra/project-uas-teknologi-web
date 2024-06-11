@@ -1,7 +1,3 @@
-<?php
-$db = new Connection();
-// var_dump($db->getIcon());die();
-?>
 <!-- Header-->
 <header class="py-5">
     <div class="container px-5 pb-5">
@@ -12,7 +8,7 @@ $db = new Connection();
                     <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
                         <div class="text-">Mahasiswa - Instiut Teknologi Sapta Mandiri</div>
                     </div>
-                    <div class="fs-3 fw-light text-muted">Welcome My Portofolio</div>
+                    <div class="fs-3 fw-light text-muted">Welcome My Simple Portofolio</div>
                     <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline"><?= $db->getProfile('nama') ?></span></h1>
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
                         <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="?page=resume">Resume</a>
@@ -152,7 +148,7 @@ $db = new Connection();
             <div class="col-xxl-8">
                 <div class="text-center my-5">
                     <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
-                    <p class="lead fw-light mb-4">Halo perkenalkan nama saya <?= $db->getProfile('nama') ?> biasa dipanggil <?= $db->getProfile('nama_panggilan') ?>.</p>
+                    <p class="lead fw-bold mb-4">Halo perkenalkan nama saya <span class="text-success"><?= $db->getProfile('nama') ?></span> biasa dipanggil <span class="text-success"><?= $db->getProfile('nama_panggilan') ?></span>.</p>
                     <p class="text-muted"><?= $db->getProfile('tentang') ?></p>
                     <div class="d-flex justify-content-center fs-2 gap-4">
                         <?php foreach($db->getIcon() as $icon): ?>

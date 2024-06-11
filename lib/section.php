@@ -1,5 +1,5 @@
 <?php 
 
-function Section($goFile) {
+function Section($goFile, $db) {
     return include("sections/$goFile");
 }

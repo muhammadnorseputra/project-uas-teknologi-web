@@ -3,7 +3,8 @@
     include_once 'navbar.php';
     function RenderSection($file)
     {
-        return Section($file);
+        $db = new Query();
+        return Section($file, $db);
     }
     ?>
 </main>
