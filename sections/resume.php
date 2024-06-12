@@ -75,26 +75,11 @@
                                 <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Professional Skills</span></h3>
                             </div>
                             <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                <div class="col mb-4 mb-md-0">
-                                    <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">SEO/SEM Marketing</div>
+                                <?php foreach($db->getSkills() as $skill): ?>
+                                <div class="col mb-4">
+                                    <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><?= $skill->keterangan ?></div>
                                 </div>
-                                <div class="col mb-4 mb-md-0">
-                                    <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Statistical Analysis</div>
-                                </div>
-                                <div class="col">
-                                    <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Web Development</div>
-                                </div>
-                            </div>
-                            <div class="row row-cols-1 row-cols-md-3">
-                                <div class="col mb-4 mb-md-0">
-                                    <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Network Security</div>
-                                </div>
-                                <div class="col mb-4 mb-md-0">
-                                    <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Adobe Software Suite</div>
-                                </div>
-                                <div class="col">
-                                    <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">User Interface Design</div>
-                                </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                         <!-- Languages list-->
@@ -104,15 +89,11 @@
                                 <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Languages</span></h3>
                             </div>
                             <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                <div class="col mb-4 mb-md-0">
-                                    <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">HTML</div>
+                                <?php foreach($db->getBahasa() as $bahasa): ?>
+                                <div class="col mb-4">
+                                    <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100"><?= $bahasa->keterangan ?></div>
                                 </div>
-                                <div class="col mb-4 mb-md-0">
-                                    <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">CSS</div>
-                                </div>
-                                <div class="col">
-                                    <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">JavaScript</div>
-                                </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
