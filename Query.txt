@@ -1,0 +1,20 @@
+-- database: c:\laragon\www\project-uas-teknologi-web\MyProfile.db
+
+-- Use the ▷ button in the top right corner to run the entire file.
+
+-- SELECT * FROM sekolah;
+
+update sekolah set tahun = '2011 - 2014' where rowid = 2;
+
+INSERT INTO sekolah (tahun, tingkat, lokasi, deskripsi_sekolah) values (
+    '2023 - Sekarang',
+    'S1 - Teknologi Informasi',
+    'ITS Mandiri',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.'
+);
+
+update pengalaman set tahun = '2018 - Sekarang', 
+pekerjaan = 'Pengadministrasi Umum', 
+lokasi = 'BKPSDM Balangan' where rowid = 1;
+
+delete from pengalaman WHERE rowid = 2

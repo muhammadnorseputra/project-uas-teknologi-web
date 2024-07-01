@@ -40,7 +40,7 @@ class Query {
     }
 
     public function getSekolah() { 
-        $tbl = $this->db->query("SELECT * FROM sekolah"); 
+        $tbl = $this->db->query("SELECT * FROM sekolah ORDER BY id desc"); 
         $sekolah = $tbl->fetchAll(PDO::FETCH_OBJ);
         return $sekolah;
     }
