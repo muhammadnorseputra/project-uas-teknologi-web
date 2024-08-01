@@ -1,7 +1,8 @@
 <?php
 
 // Fungsi untuk membersihkan data input
-function Filter($data) {
+function Filter($data)
+{
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
@@ -24,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Menyiapkan statement SQL untuk memasukkan data
-        $stmt = $db->prepare("INSERT INTO contact (nama, email, nohp, pesan) VALUES (:nama, :email, :nohp, :pesan)");
+        $stmt = $db->prepare("INSERT INTO `contact` (nama, email, nohp, pesan) VALUES (:nama, :email, :nohp, :pesan)");
 
         // Mengikat parameter ke statement SQL
         $stmt->bindParam(':nama', $nama);

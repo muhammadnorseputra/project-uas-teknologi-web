@@ -49,20 +49,23 @@ class Query
         return $pengalaman;
     }
 
-    public function getSekolah() { 
-        $tbl = $this->db->query("SELECT * FROM sekolah ORDER BY id desc"); 
+    public function getSekolah()
+    {
+        $tbl = $this->db->query("SELECT * FROM `sekolah` ORDER BY `id` desc");
         $sekolah = $tbl->fetchAll(PDO::FETCH_OBJ);
         return $sekolah;
     }
 
-    public function getProjects() { 
-        $tbl = $this->db->query("SELECT * FROM project"); 
+    public function getProjects()
+    {
+        $tbl = $this->db->query("SELECT * FROM `project`");
         $projects = $tbl->fetchAll(PDO::FETCH_OBJ);
         return $projects;
     }
 
-    public function getJumlahContact() { 
-        $tbl = $this->db->query("SELECT COUNT(id) as jumlah FROM contact"); 
+    public function getJumlahContact()
+    {
+        $tbl = $this->db->query("SELECT COUNT(id) as jumlah FROM `contact`");
         $sum = $tbl->fetchObject();
         return $sum->jumlah;
     }
