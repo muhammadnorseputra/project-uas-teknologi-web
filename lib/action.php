@@ -19,8 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // Membuat koneksi ke database SQLite
-        $db = new PDO('sqlite:../MyProfile.db');
+        // $db = new PDO('sqlite:../MyProfile.db');
 
+        // Membuat koneksi ke database phpmyadmin
+        $db = new PDO("mysql:host=localhost;dbname=cv_putra", "root", "");
+    
         // Mengatur mode error PDO ke exception
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
